@@ -1,18 +1,13 @@
-var http = require('http');
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
-}).listen(20000, '127.0.0.1');
+var express = require('express')
+var app = express();
+var cool = require('cool-ascii-faces');
 
+app.set('port', (process.env.PORT || 5000))
 
-
-console.log('Server running at http://127.0.0.1:1337/');
-
-var net = require('net');
-
-var server = net.createServer(function (socket) {
-  socket.write('Echo server\r\n');
-  socket.pipe(socket);
+app.get('/', function(request, response) {
+  response.send(cool());
 });
 
-server.listen(20000, '127.0.0.1');
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})
