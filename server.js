@@ -1,19 +1,18 @@
-var app = require('express').createServer()
-  , io = require('socket.io').listen(app);
-  
-var port = process.env.PORT || 8001;
+var http = require('http');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+}).listen(20000, '127.0.0.1');
 
-app.listen(port);
 
-app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');
+
+console.log('Server running at http://127.0.0.1:1337/');
+
+var net = require('net');
+
+var server = net.createServer(function (socket) {
+  socket.write('Echo server\r\n');
+  socket.pipe(socket);
 });
 
-
-io.sockets.on('connection', function (socket) {
-    // echo the message
-    socket.on('message', function (data) {
-        console.info(data);
-        socket.send("[ECHO] "+data);
-    });
-});
+server.listen(20000, '127.0.0.1');
