@@ -19,6 +19,10 @@ app.get('/fonticons/fonts/icomoon.woff', function (req, res) {
   res.sendFile(__dirname + '/icomoon.woff');
 });
 
+app.get('/bg.png', function (req, res) {
+  res.sendFile(__dirname + '/bg.png');
+});
+
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 });
