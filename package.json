@@ -1,7 +1,20 @@
+// server.js
+/*
 {
   "name": "websockets",                                              
   "version": "0.0.1",
   "dependencies": {
     "socket.io": ">= 0.8.7"
+  }
+}
+*/
+// client.js
+
+{
+  "name": "websockets",                                              
+  "version": "0.0.1",
+  "dependencies":
+  {
+    "express": "~4.9.x"
   }
 }
