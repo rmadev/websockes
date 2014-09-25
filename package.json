@@ -1,3 +1,5 @@
+// server.js
+/*
 {
   "name": "websockets",                                              
   "version": "0.0.1",
@@ -5,5 +7,16 @@
   {
     "socket.io": ">= 0.8.7",
     "express": ">= 2.5"
+  }
+}
+*/
+// client.js
+
+{
+  "name": "websockets",                                              
+  "version": "0.0.1",
+  "dependencies":
+  {
+    "express": "~4.9.x"
   }
 }
