@@ -1,13 +1,26 @@
-var express = require('express')
-var app = express();
-var cool = require('cool-ascii-faces');
+var app = require('http').createServer(handler)
+, io = require('socket.io').listen(app)
+, fs = require('fs')
 
-app.set('port', (process.env.PORT || 5000))
+app.listen(process.env.PORT || 8001);
 
-app.get('/', function(request, response) {
-  response.send(cool());
+function handler (req, res) {
+fs.readFile('index.html',
+function (err, data) {
+if (err) {
+res.writeHead(500);
+return res.end('Error loading index.html');
+}
+
+res.writeHead(200, {'Content-Type': 'text/html', "Content-Length": data.length});
+res.end(data);
 });
+}
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
-})
+io.sockets.on('connection', function (socket) {
+// echo the message
+socket.on('message', function (data) {
+console.info(data);
+socket.send("[ECHO] "+data);
+});
+});
