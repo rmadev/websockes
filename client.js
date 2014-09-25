@@ -7,11 +7,11 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/c.html');
 });
 
-app.get('/pconverse.min.css', function (req, res) {
-  res.sendFile(__dirname + '/converse.min.css');
+app.get('/converse.css', function (req, res) {
+  res.sendFile(__dirname + '/converse.css');
 });
 
-app.get('/pconverse.min.js', function (req, res) {
+app.get('/converse.min.js', function (req, res) {
   res.sendFile(__dirname + '/converse.min.js');
 });
 
