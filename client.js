@@ -8,15 +8,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/pconverse.min.css', function (req, res) {
-  res.sendFile(__dirname + '/public/converse.min.css');
+  res.sendFile(__dirname + '/converse.min.css');
 });
 
 app.get('/pconverse.min.js', function (req, res) {
-  res.sendFile(__dirname + '/public/converse.min.js');
+  res.sendFile(__dirname + '/converse.min.js');
 });
 
 app.get('/fonticons/fonts/icomoon.woff', function (req, res) {
-  res.sendFile(__dirname + '/public/icomoon.woff');
+  res.sendFile(__dirname + '/icomoon.woff');
 });
 
 app.listen(app.get('port'), function() {
