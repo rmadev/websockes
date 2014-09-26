@@ -568,13 +568,12 @@ span.spinner.hor_centered {
   padding: 2px 2px 2px 4px;
   margin: 0;
 }
-#conversejs .chat-head-chatbox {
+#conversejs .chat-head-chatbox,
+#conversejs .chat-head-chatroom {
   background-color: rgb(231, 231, 231);
   color: black;
 }
-#conversejs .chat-head-chatroom {
-  background-color: #0F592F;
-}
+
 #conversejs .chat-body {
   background-color: white;
   border-bottom-right-radius: 4px;
@@ -893,7 +892,10 @@ dl.add-converse-contact {
 
 #conversejs .chat-head-chatbox a.configure-chatroom-button,
 #conversejs .chat-head-chatbox a.toggle-chatbox-button,
-#conversejs .chat-head-chatbox a.close-chatbox-button {
+#conversejs .chat-head-chatbox a.close-chatbox-button,
+#conversejs .chat-head-chatroom a.configure-chatroom-button,
+#conversejs .chat-head-chatroom a.toggle-chatbox-button,
+#conversejs .chat-head-chatroom a.close-chatbox-button {
   color:black;
 }
 
