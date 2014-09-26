@@ -17,16 +17,6 @@ body, a, img {
     </div>
 </body>
 
-<script type="text/javascript"
-    src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script>
-
-<script>
-     function changePage(){
-      $('#refresh').load("step2.html");
-    }
-</script>
-
 <script>
 require(['converse'], function (converse) {
     converse.initialize({
@@ -43,5 +33,15 @@ require(['converse'], function (converse) {
     });
 });
 
+</script>
+
+<script type="text/javascript"
+    src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+
+<script>
+     function changePage(){
+      $('#refresh').load("step2.html");
+    }
 </script>
 </html>
