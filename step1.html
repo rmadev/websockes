@@ -18,8 +18,8 @@ body, a, img {
 <script>
 require(['converse'], function (converse) {
     converse.initialize({
-        auto_list_rooms: false,
-        auto_subscribe: false,
+        auto_list_rooms: true,
+        auto_subscribe: true,
         //bosh_service_url: 'https://bind.conversejs.org', // Please use this connection manager only for testing purposes
         bosh_service_url: 'http://ec2-46-137-53-127.eu-west-1.compute.amazonaws.com:5280/http-bind',
         hide_muc_server: false,
