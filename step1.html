@@ -11,7 +11,7 @@ body, a, img {
 </style>
 <body>
     <div id="refresh">
-        <a onclick="changePage" href="javascript:void(0);"><img src="bg1.png"></a>
+        <a onclick="changePage()" href="javascript:void(0);"><img src="bg1.png"></a>
     </div>
 </body>
 
@@ -33,7 +33,7 @@ require(['converse'], function (converse) {
 
 <script type="text/javascript">
   function changePage(){
-        $( "#refresh" ).load( "step2.html" );
+        $( "#refresh" ).load( "bg1.png" );
   }
 </script>
 
