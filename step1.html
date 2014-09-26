@@ -2,7 +2,6 @@
 <head>
 <link rel="stylesheet" type="text/css" media="screen" href="converse.css">
 <script src="converse.min.js"></script>
-<!-- <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script> -->
 </head>
 <style>
 body, a, img {
@@ -10,11 +9,9 @@ body, a, img {
     padding: 0;
 }
 </style>
-
 <body>
-<a href="#"><img src="bg1.png"></a>
+<a href="step2.html"><img src="bg1.png"></a>
 </body>
-
 <script>
 require(['converse'], function (converse) {
     converse.initialize({
@@ -24,20 +21,11 @@ require(['converse'], function (converse) {
         bosh_service_url: 'http://ec2-46-137-53-127.eu-west-1.compute.amazonaws.com:5280/http-bind',
         hide_muc_server: false,
         i18n: locales.en, // Refer to ./locale/locales.js to see which locales are supported
-        prebind: true,
+        prebind: false,
         show_controlbox_by_default: true,
-        roster_groups: true,
-        message_carbons: true
+        roster_groups: true
     });
 });
 
 </script>
-
-
-<!--<script type="text/javascript">
-     function changePage(){
-      $('#refresh').load("step2.html");
-    }
-</script>-->
-
 </html>
